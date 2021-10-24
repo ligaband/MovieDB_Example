@@ -7,8 +7,8 @@ public class DB_Handler {
 
 
         String connectionUrl = "jdbc:mysql://localhost:3306/shop";
-        String user = "root";
-        String pass = "Nikolaba-7";
+        String user = "";
+        String pass = "";
 
         Connection connection;
         public DB_Handler() {
