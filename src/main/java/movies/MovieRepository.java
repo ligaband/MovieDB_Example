@@ -12,7 +12,7 @@ public class MovieRepository {
     DB_Handler dbHandler = new DB_Handler();
 
     public void createTable ()throws SQLException{
-        String query = "CREATE TABLE movies ((id int primary key not null auto_increment, title VARCHAR (255) not null, genre VARCHAR (255) not null,year_of_release int not null)";
+        String query = "CREATE TABLE movies (id int primary key not null auto_increment, title VARCHAR (255) not null, genre VARCHAR (255) not null,year_of_release int not null)";
         PreparedStatement preparedStatement  = dbHandler.getConnection().prepareStatement(query);
         preparedStatement.execute();
         preparedStatement.close();
@@ -109,6 +109,19 @@ public class MovieRepository {
 
         }
         return movies;
+    }
+
+
+    public void updateMoviesTitle (int id, String newTitle) throws SQLException {
+        String query = "Update Movies SET title = ?  where id = ?" ;
+        PreparedStatement preparedStatement =dbHandler.getConnection().prepareStatement(query);
+        preparedStatement.setString(1,newTitle);
+        preparedStatement.setInt(2,id);
+
+        preparedStatement.execute();
+        preparedStatement.close();
+
+
     }
 
 

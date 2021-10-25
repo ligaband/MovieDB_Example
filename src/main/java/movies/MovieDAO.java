@@ -44,13 +44,14 @@ public class MovieDAO {
 
     }
 
-    public void updateMovie(Movie movie){
+    public String updateMoviesTitle(int id, String newTitle){
         try{
-            movieRepository.update(movie);
-            System.out.println("Movie updated successfully");
+            movieRepository.updateMoviesTitle(id, newTitle);
+            return ("Movie title updated successfully");
 
         }catch (SQLException e){
             System.out.println(e);
+            return "Can't update movie title";
         }
 
     }
@@ -87,6 +88,18 @@ public class MovieDAO {
         return null;
         }
     }
+
+    public void updateMovie(Movie movie){
+        try{
+            movieRepository.update(movie);
+            System.out.println("Movie updated successfully");
+
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+
+    }
+
 
 }
 

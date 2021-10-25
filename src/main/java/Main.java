@@ -9,7 +9,16 @@ public class Main {
         MovieDAO movieDAO = new MovieDAO();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println(movieDAO.deleteTable());
+
+
+//        System.out.println("Enter id of the movie you would like to update title");
+//
+//        int id = scanner.nextInt();
+//        String newTitle = "Mission: Impossible";
+//        movieDAO.updateMoviesTitle(id, newTitle);
+
+
+//        System.out.println(movieDAO.createTable());
 
 //        System.out.println(movieDAO.getAllMovies());
 //
@@ -19,10 +28,10 @@ public class Main {
 //        movieDAO.deleteMovie(id);
 //
 //        Movie movie = movieDAO.findMovie(id);
-//        movie.title = "Mission: Impossible 1";
+//        movie.title = "Mission: Impossible 2";
 //        movie.yearOfRelease = 1997;
 //
-//        movieDAO.updateMovie(movie);
+//       movieDAO.updateMovie(movie);
 //
 //
 //        System.out.println(movieDAO.findMovie(id));
@@ -30,8 +39,8 @@ public class Main {
 
 
 
-        //System.out.println(movieDAO.createMovie(new Movie("Mission: Impossible", "action", 1996)));
-        //System.out.println(movieDAO.createMovie(new Movie("The Godfather", "crime", 1972)));
-       // System.out.println(movieDAO.createMovie(new Movie("No time to die", "spy", 2021)));
+//        System.out.println(movieDAO.createMovie(new Movie("Mission: Impossible", "action", 1996)));
+//        System.out.println(movieDAO.createMovie(new Movie("The Godfather", "crime", 1972)));
+//        System.out.println(movieDAO.createMovie(new Movie("No time to die", "spy", 2021)));
     }
 }
